@@ -30,11 +30,13 @@ ip -6 route add 2001:db8:2::1 encap seg6local action End.DX6 nh6 :: dev ens33.20
 
 ## コンフィグ類
 
-* exp1/setup.sh
-  * Linux マシンの中に、各 namespace (e.g. host1) と各 VRF (e.g. vrf10) を作成するスクリプト
-* exp1/seil.conf
-  * 図中にある SEIL の設定を出力したもの
-  * パスワード部分は適当にマスキングを実施
+* exp1/prep-static
+  * underlay IPv6 ネットワークを static route によって構成するための設定
+  * setup.sh
+    * Linux マシンの中に、各 namespace (e.g. host1) と各 VRF (e.g. vrf10) を作成するスクリプト
+  * seil.conf
+    * 図中にある SEIL の設定を出力したもの
+    * パスワード部分は適当にマスキングを実施
 * exp1/ping.sh
   * 試験時に実施した ping
 
